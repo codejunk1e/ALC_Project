@@ -3,4 +3,9 @@
     <string name="alc_logo">ALC _logo</string>
     <string name="leaderboard">LEADERBOARD</string>
     <string name="submit">Submit</string>
+    <string name="name_dummy">John Doe</string>
+    <string name="scores_dummy">223 Learning hours, Kenya</string>
+    <string name="dummy_iq_score">300 skill IQ score, Egypt</string>
+    <string name="skill_image_gads">skill image GADS</string>
+    <string name="iq_image_gads">IQ Image GADS</string>
 </resources>
