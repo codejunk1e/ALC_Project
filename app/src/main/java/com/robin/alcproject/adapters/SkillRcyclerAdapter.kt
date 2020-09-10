@@ -1,25 +1,28 @@
-package com.robin.alcproject
+package com.robin.alcproject.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.robin.alcproject.R
+import com.robin.alcproject.models.SkillItem
 
 /**
  * @author robin
  * Created on 9/9/20
  */
 
-class SkillRcyclerAdapter(private val items: List<BoardItem>) : RecyclerView.Adapter<SkillRcyclerAdapter.ViewHolder>() {
+class SkillRcyclerAdapter(private var items: List<SkillItem> , private var context : Context) : RecyclerView.Adapter<SkillRcyclerAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         private var name : TextView = itemView.findViewById(R.id.skill_name)
         private var score : TextView = itemView.findViewById(R.id.skill_score)
 
-        fun bind(boardItem: BoardItem) {
+        fun bind(boardItem: SkillItem) {
             name.text = boardItem.name
-            score.text = boardItem.score
+            score.text = context.getString(R.string.scores_main_text_skill, boardItem.hours.toString(), boardItem.country )
         }
     }
 
@@ -32,5 +35,10 @@ class SkillRcyclerAdapter(private val items: List<BoardItem>) : RecyclerView.Ada
     }
 
     override fun getItemCount(): Int = items.size
+
+     fun updateAdapter ( items: List<SkillItem>){
+        this.items = items
+         notifyDataSetChanged()
+    }
 
 }
