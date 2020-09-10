@@ -30,7 +30,7 @@ class RxResult<T> private constructor(
 
         @NonNull
         fun <T> error(@NonNull error: Throwable): RxResult<T> {
-            return RxResult<T>(null, error)
+            return RxResult(null, error)
         }
     }
 }

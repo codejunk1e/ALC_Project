@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.robin.alcproject.R
 import com.robin.alcproject.models.IQItem
-import com.robin.alcproject.models.SkillItem
 
 /**
  * @author robin

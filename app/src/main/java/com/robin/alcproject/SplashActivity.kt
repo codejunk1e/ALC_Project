@@ -15,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
 
     private fun waitAndShowMainActivity() {
         val handler = Handler(Looper.getMainLooper())
-        handler.postDelayed(Runnable {
+        handler.postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 2000)

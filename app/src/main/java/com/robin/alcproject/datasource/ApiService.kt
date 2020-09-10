@@ -1,7 +1,6 @@
 package com.robin.alcproject.datasource
 
 import okhttp3.Interceptor
-import okhttp3.OkHttp
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
@@ -34,11 +33,10 @@ object ApiService {
     private val builder = Retrofit.Builder().baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
-        .client(okHttp.build());
-
+        .client(okHttp.build())
 
     @JvmStatic
     fun <S> buildService(serviceType : Class<S>) : S {
-        return retrofit.create(serviceType);
+        return retrofit.create(serviceType)
     }
 }
