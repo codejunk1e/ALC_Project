@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit
  * @author robin
  * Created on 9/9/20
  */
-object ApiService {
+object LeaderboardApiService {
 
      private val retrofit: Retrofit
             get() = builder.build()

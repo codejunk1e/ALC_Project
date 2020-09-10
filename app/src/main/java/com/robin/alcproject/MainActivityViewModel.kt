@@ -3,8 +3,8 @@ package com.robin.alcproject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.LiveDataReactiveStreams
 import androidx.lifecycle.ViewModel
-import com.robin.alcproject.datasource.ApiEndpoint
-import com.robin.alcproject.datasource.ApiService
+import com.robin.alcproject.datasource.LeaderboardApiEndpoint
+import com.robin.alcproject.datasource.LeaderboardApiService
 import com.robin.alcproject.datasource.RxResult
 import com.robin.alcproject.models.IQItem
 import com.robin.alcproject.models.SkillItem
@@ -21,7 +21,7 @@ typealias ObservableSkillIQ = LiveData<RxResult<List<IQItem>>>
  */
 class MainActivityViewModel: ViewModel(){
 
-    private val apiService  = ApiService.buildService(ApiEndpoint::class.java)
+    private val apiService  = LeaderboardApiService.buildService(LeaderboardApiEndpoint::class.java)
 
     private lateinit var _observableLearningHours : ObservableLearningHours
     val observableLearningHours : ObservableLearningHours
