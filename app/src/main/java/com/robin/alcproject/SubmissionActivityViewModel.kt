@@ -4,11 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.LiveDataReactiveStreams
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
-import com.robin.alcproject.datasource.RxResult
+import com.robin.alcproject.datasource.LeaderboardApiService
 import com.robin.alcproject.datasource.SubmissionApiEndpoint
-import com.robin.alcproject.datasource.SubmissionApiService
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.schedulers.Schedulers
 import retrofit2.Response
 
@@ -17,7 +15,7 @@ import retrofit2.Response
  * Created on 9/10/20
  */
 class SubmissionActivityViewModel: ViewModel() {
-    private val apiService  = SubmissionApiService.buildService(SubmissionApiEndpoint::class.java)
+    private val apiService  = LeaderboardApiService.buildService(SubmissionApiEndpoint::class.java)
     private lateinit var successHandler : SubmissionResultListener
     private val observer = Observer<Response<Unit>> {
         if(it.isSuccessful){
