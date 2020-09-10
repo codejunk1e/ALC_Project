@@ -14,4 +14,13 @@
 
     <string name="skill_image_gads">skill image GADS</string>
     <string name="iq_image_gads">IQ Image GADS</string>
+    <string name="first_name_hint">First Name</string>
+    <string name="last_name_hint">Last Name</string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="github_edit_text_hint">Project on GITHUB (Link)</string>
+    <string name="not_successful">Submission not Successful</string>
+    <string name="confirmation">Are you sure?</string>
+    <string name="successful">Submission Successful</string>
+    <string name="yes">Yes</string>
+
 </resources>
